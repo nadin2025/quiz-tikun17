@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, ArrowLeft } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitch from "./LanguageSwitch";
+import HomeButton from "./HomeButton";
 interface ContactFormProps {
   onBack: () => void;
   assessmentData?: any;
@@ -99,7 +100,17 @@ export default function ContactForm({
     }
   };
   const isFormValid = formData.name && formData.email && formData.company;
-  return <section className="min-h-screen bg-background py-12">
+  return <section className="min-h-screen bg-background py-12 relative">
+      {/* Home Button */}
+      <div className="absolute top-6 left-6 z-10">
+        <HomeButton />
+      </div>
+      
+      {/* Language Switch */}
+      <div className="absolute top-6 right-6 z-10">
+        <LanguageSwitch />
+      </div>
+      
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-8">

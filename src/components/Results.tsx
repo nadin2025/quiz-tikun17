@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { AlertTriangle, CheckCircle, Mail, FileText, Shield, Users, Database, Settings, Download } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitch from "./LanguageSwitch";
+import HomeButton from "./HomeButton";
 interface ResultsProps {
   answers: {
     [key: string]: any;
@@ -125,7 +126,17 @@ export default function Results({
     link.click();
     document.body.removeChild(link);
   };
-  return <section className="min-h-screen bg-background py-12">
+  return <section className="min-h-screen bg-background py-12 relative">
+      {/* Home Button */}
+      <div className="absolute top-6 left-6 z-10">
+        <HomeButton />
+      </div>
+      
+      {/* Language Switch */}
+      <div className="absolute top-6 right-6 z-10">
+        <LanguageSwitch />
+      </div>
+      
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-8">

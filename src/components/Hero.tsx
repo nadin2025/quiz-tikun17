@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Shield, FileText, Users, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitch from "./LanguageSwitch";
+import HomeButton from "./HomeButton";
 
 interface HeroProps {
   onStartAssessment: () => void;
@@ -13,6 +14,11 @@ export default function Hero({ onStartAssessment }: HeroProps) {
 
   return (
     <section className="min-h-screen bg-gradient-subtle flex items-center relative">
+      {/* Home Button */}
+      <div className="absolute top-6 left-6 z-10">
+        <HomeButton />
+      </div>
+      
       {/* Language Switch */}
       <div className="absolute top-6 right-6 z-10">
         <LanguageSwitch />

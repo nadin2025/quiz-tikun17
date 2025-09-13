@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitch from "./LanguageSwitch";
+import HomeButton from "./HomeButton";
 
 interface QuestionnaireProps {
   onComplete: (results: any) => void;
@@ -145,6 +146,11 @@ export default function Questionnaire({ onComplete, onBack }: QuestionnaireProps
 
   return (
     <section className="min-h-screen bg-background py-12 relative">
+      {/* Home Button */}
+      <div className="absolute top-6 left-6 z-10">
+        <HomeButton />
+      </div>
+      
       {/* Language Switch */}
       <div className="absolute top-6 right-6 z-10">
         <LanguageSwitch />

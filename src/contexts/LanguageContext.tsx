@@ -115,6 +115,7 @@ const translations = {
     'common.language': 'Language',
     'common.english': 'English',
     'common.hebrew': 'עברית',
+    'common.home': 'Home',
   },
   he: {
     // Hero Section
@@ -221,6 +222,7 @@ const translations = {
     'common.language': 'שפה',
     'common.english': 'English',
     'common.hebrew': 'עברית',
+    'common.home': 'בית',
   }
 };
 
